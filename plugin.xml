@@ -1,11 +1,10 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="com.phonegap.core.phonedialer"
+    id="com.teamnemitoff.phonedialer"
     version="0.2.0">
     <name>PhoneDialer</name>
-    <description>Cordova Device Plugin</description>
+    <description>iOS Plugin to Dial Phone without extra confirmation pop-up</description>
     <license>Apache 2.0</license>
     <keywords>cordova,dialer</keywords>
-
     <js-module src="www/dialer.js" name="phonedialer">
         <merges target="phonedialer" />
     </js-module>

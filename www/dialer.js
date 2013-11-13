@@ -8,15 +8,19 @@ module.exports = {
      *
      * @param {String, Function}      The phone number to call, The callback error function
      */
-    dial: function(phnum, error) {
-        if (phnum == null)
-            error("empty");
-        if (platformId == 'ios') {
-            exec(null, function(err) { 
-                error(err);
-            }, "PhoneDialer", "dial", [phnum]);
+    dial: function(phnum, errorCallback, successCallback) {
+        if (phnum == null) errorCallback("empty");
+        if (platformId == 'ios' || platformId == 'android') {
+            exec(
+                successCallback, 
+                errorCallback, 
+                "PhoneDialer", 
+                "dial", 
+                [phnum]
+            );
         } else {
-            document.location.href = "tel:" + phnum
+            document.location.href = "tel:" + phnum;
+            if (successCallback) successCallback();
         }
     },
 };

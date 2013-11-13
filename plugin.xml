@@ -2,7 +2,7 @@
     id="com.teamnemitoff.phonedialer"
     version="0.2.1">
     <name>PhoneDialer</name>
-    <description>iOS Plugin to Dial Phone without extra confirmation pop-up</description>
+    <description>Dials Phone without extra confirmation pop-up</description>
     <license>Apache 2.0</license>
     <keywords>cordova,dialer</keywords>
     <js-module src="www/dialer.js" name="phonedialer">
@@ -22,7 +22,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="PhoneDialer">
-                <param name="android-package" value="com.teamnemitoff.PhoneDialer"/>
+                <param name="android-package" value="com.teamnemitoff.phonedialer.PhoneDialer"/>
             </feature>
         </config-file>
         <source-file 

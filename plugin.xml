@@ -1,6 +1,6 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="com.teamnemitoff.phonedialer"
-    version="0.2.0">
+    version="0.2.1">
     <name>PhoneDialer</name>
     <description>iOS Plugin to Dial Phone without extra confirmation pop-up</description>
     <license>Apache 2.0</license>

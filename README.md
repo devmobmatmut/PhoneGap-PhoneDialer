@@ -1,3 +1,11 @@
+Description
+===========
+Enables PhoneGap apps on the iPhone and Android platforms
+to dial a phone number without requireing additional user
+interaction (such as the 'Call / Cancel' popup that ordinarilly 
+would occur when using window.location.href = "tel:2125551212".
+
+
 Usage
 =====
 
@@ -5,22 +13,18 @@ Usage
 
 Error return by the plugin : ["feature","empty"]
 
-phonedialer.dial("123", function(err) {
-            if (err == "feature")
-                alert("Your device doesn't support this feature.");
-            if (err == "empty")
-                alert("Unknown phone number");
-});
+phonedialer.dial(
+  "2125551212", 
+  function(err) {
+    if (err == "empty") alert("Unknown phone number");
+    else alert("Dialer Error:" + err);    
+  },
+  function(success) { alert('Dialing succeeded'); }
+ );
 
 ```
 
 Installation
 ============
+phonegap local plugin add "current repo"
 
-cordova add plugin "current repo"
-
-Problem
-=======
-
-If you get this error : PhoneDialerPlugin[...] CDVPlugin class PhoneDialer (pluginName: PhoneDialer) does not exist.
-Check if the PhoneDialer.m exist in your xcode project: "Build Phases" Section -> "Compile Sources"

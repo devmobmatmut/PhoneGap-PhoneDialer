@@ -20,7 +20,7 @@
         <source-file src="src/ios/PhoneDialer.m"/>
     </platform>
     <platform name="android">
-        <config-file target="AndroidManifest.xml" parent="/manifest/*">
+        <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.CALL_PHONE" />
         </config-file>
         <source-file 

@@ -20,10 +20,8 @@
         <source-file src="src/ios/PhoneDialer.m"/>
     </platform>
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="PhoneDialer">
-                <param name="android-package" value="com.teamnemitoff.phonedialer.PhoneDialer"/>
-            </feature>
+        <config-file target="AndroidManifest.xml" parent="/manifest/*">
+            <uses-permission android:name="android.permission.CALL_PHONE" />
         </config-file>
         <source-file 
             src="src/android/PhoneDialer.java" 

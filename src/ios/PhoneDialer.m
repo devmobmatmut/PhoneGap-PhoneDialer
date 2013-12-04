@@ -21,7 +21,7 @@
         NSString* number = [command.arguments objectAtIndex:0];
 
         if (number != nil && [number length] > 0) {
-            if ([number hasPrefix:@"tel:"]) {
+            if ([number hasPrefix:@"tel:"] || [number hasPrefix:@"telprompt://"]) {
                 url = number;
             } else {
                 // escape characters such as spaces that may not be accepted by openURL

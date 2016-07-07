@@ -1,12 +1,15 @@
 package com.teamnemitoff.phonedialer;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
 import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.Manifest;
+import android.content.pm.PackageManager;
 
 public class PhoneDialer extends CordovaPlugin {
 	public static final int CALL_REQ_CODE = 0;

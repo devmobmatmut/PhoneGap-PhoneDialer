@@ -16,6 +16,9 @@ public class PhoneDialer extends CordovaPlugin {
 	public static final int PERMISSION_DENIED_ERROR = 20;
   	public static final String CALL_PHONE = Manifest.permission.CALL_PHONE;
   	
+  	private CallbackContext callbackContext;
+  	private JSONArray executeArgs;
+  	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		this.callbackContext = callbackContext;

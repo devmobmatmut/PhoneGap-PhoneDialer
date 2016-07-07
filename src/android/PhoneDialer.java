@@ -28,6 +28,7 @@ public class PhoneDialer extends CordovaPlugin {
 		} else {
 			cordova.requestPermission(this, CALL_REQ_CODE, CALL_PHONE);	
 		}
+		return true;
 	}
 	
 	public void onRequestPermissionResult(int requestCode, String[] permissions, int[] grantResults) throws JSONException {

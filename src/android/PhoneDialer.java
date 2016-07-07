@@ -12,6 +12,7 @@ public class PhoneDialer extends CordovaPlugin {
 	public static final int CALL_REQ_CODE = 0;
 	public static final int PERMISSION_DENIED_ERROR = 20;
   	public static final String CALL_PHONE = Manifest.permission.CALL_PHONE;
+  	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		if (cordova.hasPermission(CALL_PHONE)) {
@@ -21,6 +22,7 @@ public class PhoneDialer extends CordovaPlugin {
 		}
 		    
 	}
+	
 	public void onRequestPermissionResult(int requestCode, String[] permissions, int[] grantResults) throws JSONException {
 	    for (int r : grantResults) {
 	      if (r == PackageManager.PERMISSION_DENIED) {
@@ -34,6 +36,7 @@ public class PhoneDialer extends CordovaPlugin {
 	        break;
 	    }
 	}
+	
 	private void callPhone(JSONArray args) throws JSONException {
 		try {
 		    	String phoneNumber = args.getString(0);

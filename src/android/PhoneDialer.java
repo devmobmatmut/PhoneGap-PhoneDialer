@@ -52,12 +52,10 @@ public class PhoneDialer extends CordovaPlugin {
 	                callIntent.setData(uri);
 	                this.cordova.getActivity().startActivity(callIntent);
 	                callbackContext.success();
-	                return true;
 	            } catch (Exception e) {
 	        	String msg = "Exception Dialing Phone Number: " + e.getMessage();
 	        	System.err.println(msg);
 		        callbackContext.error(msg);
-		        return false;
 	            }
 	}
 }

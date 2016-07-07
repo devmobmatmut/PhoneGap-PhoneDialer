@@ -1,5 +1,5 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.teamnemitoff.phonedialer"
+    id="com.devmobmatmut.phonedialer"
     version="0.3.0">
     <name>PhoneDialer</name>
     <description>Dials Phone without extra confirmation pop-up</description>
@@ -22,7 +22,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="PhoneDialer">
-                <param name="android-package" value="com.teamnemitoff.phonedialer.PhoneDialer"/>
+                <param name="android-package" value="com.devmobmatmut.phonedialer.PhoneDialer"/>
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
@@ -30,6 +30,6 @@
         </config-file>
         <source-file 
             src="src/android/PhoneDialer.java" 
-            target-dir="src/com/teamnemitoff/phonedialer"/>
+            target-dir="src/com/devmobmatmut/phonedialer"/>
     </platform>
 </plugin>

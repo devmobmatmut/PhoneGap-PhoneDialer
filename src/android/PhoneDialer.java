@@ -1,4 +1,4 @@
-package com.teamnemitoff.phonedialer;
+package com.devmobmatmut.phonedialer;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
@@ -18,12 +18,13 @@ public class PhoneDialer extends CordovaPlugin {
   	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+		this.callbackContext = callbackContext;
+    		this.executeArgs = args;
 		if (cordova.hasPermission(CALL_PHONE)) {
 			callPhone(args);		
 		} else {
 			cordova.requestPermission(this, CALL_REQ_CODE, CALL_PHONE);	
 		}
-		    
 	}
 	
 	public void onRequestPermissionResult(int requestCode, String[] permissions, int[] grantResults) throws JSONException {
